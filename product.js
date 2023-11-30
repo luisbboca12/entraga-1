@@ -21,7 +21,7 @@ class ProductManager {
 
     const isCodeRepeated = this.products.some((p) => p.code === code);
     if (isCodeRepeated) {
-      throw new Error(`Ya existe un producto con el código ${code}.`);
+      throw new Error(`Ya existe un producto con el codigo ${code}.`);
     }
 
     this.products.push(product);
@@ -41,7 +41,7 @@ class ProductManager {
   }
 }
 const productManager = new ProductManager();
-console.log('Productos después de crear la instancia:', productManager.getProducts());
+console.log('Productos despues de crear la instancia:', productManager.getProducts());
 
 const productId = productManager.addProduct({
   title: 'producto prueba',
@@ -54,7 +54,7 @@ const productId = productManager.addProduct({
 console.log('Producto agregado exitosamente con ID:', productId);
 
 
-console.log('Productos después de agregar un producto:', productManager.getProducts());
+console.log('Productos despues de agregar un producto:', productManager.getProducts());
 
 
 const duplicatedProductId = productManager.addProduct({
